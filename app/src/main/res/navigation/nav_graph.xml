@@ -1,0 +1,47 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/q1Fragment">
+    <fragment
+        android:id="@+id/q1Fragment"
+        android:name="com.example.contactform.ui.Q1Fragment"
+        android:label="fragment_q1"
+        tools:layout="@layout/fragment_q1" >
+        <action
+            android:id="@+id/action_q1Fragment_to_q2Fragment"
+            app:destination="@id/q2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/q2Fragment"
+        android:name="com.example.contactform.ui.Q2Fragment"
+        android:label="fragment_q2"
+        tools:layout="@layout/fragment_q2" >
+        <action
+            android:id="@+id/action_q2Fragment_to_q3Fragment"
+            app:destination="@id/q3Fragment" />
+        <action
+            android:id="@+id/action_q2Fragment_to_q1Fragment"
+            app:destination="@id/q1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/q3Fragment"
+        android:name="com.example.contactform.ui.Q3Fragment"
+        android:label="fragment_q3"
+        tools:layout="@layout/fragment_q3" >
+        <action
+            android:id="@+id/action_q3Fragment_to_submitFragment"
+            app:destination="@id/submitFragment" />
+        <action
+            android:id="@+id/action_q3Fragment_to_q2Fragment"
+            app:destination="@id/q2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/submitFragment"
+        android:name="com.example.contactform.ui.SubmitFragment"
+        android:label="fragment_submit"
+        tools:layout="@layout/fragment_submit" >
+        <action
+            android:id="@+id/action_submitFragment_to_q3Fragment"
+            app:destination="@id/q3Fragment" />
+    </fragment>
+</navigation>
